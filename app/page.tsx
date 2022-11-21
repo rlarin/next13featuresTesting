@@ -1,12 +1,10 @@
-import Layout from './layout';
+import React from 'react';
 
 const Page = () => {
   return (
-    <Layout>
-      <>
-        <p>Home Page</p>
-      </>
-    </Layout>
+    <>
+      <p>Home Page Next 13</p>
+    </>
   );
 };
 
