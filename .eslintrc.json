@@ -2,6 +2,7 @@
   "root": true,
   "extends": [
     "next/core-web-vitals",
+    "./node_modules/standard/eslintrc.json",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -21,7 +22,10 @@
     "react/react-in-jsx-scope": "off",
     "camelcase": "error",
     "spaced-comment": "error",
-    "quotes": ["error", "single"],
+    "quotes": [
+      "error",
+      "single"
+    ],
     "no-duplicate-imports": "error"
   }
 }
