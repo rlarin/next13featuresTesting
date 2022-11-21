@@ -1,30 +1,21 @@
 import {ReactNode} from 'react';
 import Head from './head';
-import Link from 'next/link';
+import Navbar from './components/navbar/navbar';
+import '../styles/globals.scss';
 
-export default function RootLayout({children}: {children: ReactNode}) {
-  const menuItems = [
-    {label: 'Home Page', path: '/'},
-    {label: 'About Page', path: '/about'},
-  ];
-
+const RootLayout = ({children}: {children: ReactNode}) => {
   return (
     <html>
-      <Head />
+      <Head title='Next JS 13' />
       <body>
-        <header>
-          <nav>
-            <ul>
-              {menuItems.map(({path, label}, index) => (
-                <li key={index}>
-                  <Link href={path}>{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </header>
+        <Navbar />
         {children}
+        <footer>
+          <p>Footer</p>
+        </footer>
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
